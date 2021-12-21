@@ -1,12 +1,12 @@
 <launch>
   <arg name="device" default=""/>
-  <arg name="ns" default="audio"/>
+  <arg name="ns" default="rode"/>
   <arg name="dst" default="alsasink"/>
   <arg name="do_timestamp" default="false"/>
   <arg name="format" default="mp3"/>
-  <arg name="channels" default="1"/>
-  <arg name="sample_rate" default="16000"/>
-  <arg name="sample_format" default="S16LE"/>
+  <arg name="channels" default="3"/>
+  <arg name="sample_rate" default="8000"/>
+  <arg name="sample_format" default="S32LE"/>
 
   <group ns="$(arg ns)">
   <node name="audio_play" pkg="audio_play" type="audio_play" output="screen">
