@@ -1,5 +1,5 @@
 <launch>
-  <arg name="device" default="plughw:0"/>
+  <arg name="device" default=""/>
   <arg name="ns" default="rode"/>
   <arg name="dst" default="alsasink"/>
   <arg name="do_timestamp" default="false"/>
@@ -9,7 +9,7 @@
   <arg name="sample_format" default="S32LE"/>
 
   <group ns="$(arg ns)">
-  <node name="audio_play" pkg="audio_play" type="audio_play" output="screen">
+  <node name="rode_play" pkg="audio_play" type="rode_play" output="screen">
     <param name="device" value="$(arg device)"/>
     <param name="dst" value="$(arg dst)"/>
     <param name="do_timestamp" value="$(arg do_timestamp)"/>
