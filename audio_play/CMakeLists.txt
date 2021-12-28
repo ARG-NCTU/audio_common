@@ -17,11 +17,11 @@ add_executable(rode_play src/rode_play.cpp)
 target_link_libraries(rode_play ${catkin_LIBRARIES} ${GST1.0_LIBRARIES} ${Boost_LIBRARIES}) 
 add_dependencies(rode_play ${catkin_EXPORTED_TARGETS})
 
-add_executable(rode_play src/audio_play.cpp)
+add_executable(audio_play  src/audio_play.cpp)
 target_link_libraries(audio_play ${catkin_LIBRARIES} ${GST1.0_LIBRARIES} ${Boost_LIBRARIES}) 
-add_dependencies(audio ${catkin_EXPORTED_TARGETS})
+add_dependencies(audio_play  ${catkin_EXPORTED_TARGETS})
 
-install(TARGETS rode_play 
+install(TARGETS audio_play
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 install(DIRECTORY launch

@@ -4,7 +4,7 @@
 #include <boost/thread.hpp>
 
 #include "std_msgs/Int16MultiArray.h"
-// #include "audio_common_msgs/AudioData.h"
+#include "audio_common_msgs/AudioData.h"
 
 namespace audio_transport
 {
@@ -35,7 +35,7 @@ namespace audio_transport
         ros::param::param<int>("~sample_rate", sample_rate, 16000);
         ros::param::param<std::string>("~sample_format", sample_format, "S16LE");
 
-        _sub = _nh.subscribe("audio", 10, &RosGstPlay::onAudio, this);
+        _sub = _nh.subscribe("/audio1/audio", 10, &RosGstPlay::onAudio, this);
 
         _loop = g_main_loop_new(NULL, false);
 
