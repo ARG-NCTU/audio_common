@@ -1,1 +1,10 @@
 build
+*.bag
+*.swp
+*.wav
+*.mp3
+catkin_ws/bin/
+catkin_ws/include/
+catkin_ws/lib/
+catkin_ws/share/
+.catkin_tools/
