@@ -17,6 +17,7 @@ Laptop $ source docker_join.sh
 ## Ros-sharp bridge
 ```
 sudo apt-get install ros-<rosdistro>-rosbridge-server
+sudo apt-get install ros-<rosdistro>-rosbridge-suite
 ```
 ## Run point clouds
 
